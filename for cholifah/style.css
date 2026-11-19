@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a0033, #3d0066, #660099);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.screen {
+  display: none;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Intro */
+#intro-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30vh;
+}
+
+#intro-screen.active {
+  display: flex;
+}
+
+.glow {
+  font-size: 2rem;
+  text-shadow: 0 0 20px #ff66cc, 0 0 40px #ff66cc;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.subtitle {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* Tombol */
+.btn {
+  margin-top: 25px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ff4d94, #ff66cc, #ff99dd);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 77, 148, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(255, 77, 148, 0.8);
+}
+
+.btn.small { font-size: 0.95rem; padding: 10px 22px; }
+
+/* Judul */
+.title {
+  font-size: 2.2rem;
+  background: linear-gradient(90deg, #ffd700, #ff66cc, #66ffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+}
+
+.name {
+  font-size: 1.3rem;
+  margin: 10px 0 25px;
+  color: #ffccff;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 25px;
+  max-width: 620px;
+  margin: 0 auto 30px;
+  backdrop-filter: blur(8px);
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Video */
+.video-wrap { margin: 30px auto; max-width: 640px; }
+
+.video-wrap h3 {
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+video {
+  width: 100%;
+  border-radius: 15px;
+  border: 3px solid #ff66cc;
+  box-shadow: 0 0 25px rgba(255, 102, 204, 0.6);
+}
+
+/* Motivasi */
+.motivation {
+  margin: 35px auto;
+  max-width: 600px;
+}
+
+#motivasi-teks {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ffee99;
+  margin-bottom: 15px;
+  transition: opacity 0.3s;
+}
+
+/* Tombol Peluk */
+.heart-btn { font-size: 1.15rem; }
+
+#love-count {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* Confetti */
+.confetti-layer {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  opacity: 0.9;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .title { font-size: 1.5rem; }
+  .glow { font-size: 1.4rem; }
+  .card { padding: 18px; }
+}

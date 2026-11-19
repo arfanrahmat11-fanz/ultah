@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selamat Ulang Tahun, Sayang! 🎂</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Layar Pembuka -->
+    <div id="intro-screen" class="screen active">
+        <h1 class="glow">Ada Kejutan Spesial Buat Kamu 🎁</h1>
+        <p class="subtitle">Dari seseorang yang jauh di sana, tapi selalu dekat di hati 💌</p>
+        <button id="start-btn" class="btn">Buka Kejutan 💖</button>
+    </div>
+
+    <!-- Layar Utama -->
+    <div id="main-screen" class="screen">
+        <div class="confetti-layer" id="confetti"></div>
+
+        <h1 class="title">🎉 Selamat Ulang Tahun yang ke 23! 🎉</h1>
+        <h2 class="name">Untuk Kamu yang Jauh di Sana 🌏</h2>
+
+        <div class="card">
+            <p>
+                Hai kamu 👋 <br><br>
+                Walaupun kita terpisah ribuan kilometer, inget ya — <br>
+                <b>kamu nggak pernah sendiri.</b> <br><br>
+                Di hari spesialmu ini, aku cuma mau bilang:<br>
+                <i>"Semoga semua impianmu tercapai, kariermu makin cemerlang,
+                    dan hatimu selalu bahagia di negeri orang panjang umur pokoknya."</i> 💫 <br><br>
+                Kerja di luar negeri itu berat — jauh dari keluarga,
+                bahasa beda, cuaca beda. Tapi kamu hebat banget bisa bertahan.
+                <b>Aku bangga sama kamu. Selalu.</b> 💪❤️
+                <b>maaf gak bisa kasih apa apa😢</b>
+                <b>semoga ucapan sederhana ini bisa bikin kamu seneng. </b>
+                <b>by arfan </b>
+
+            </p>
+        </div>
+
+        <!-- Video Kejutan -->
+        <div class="video-wrap">
+            <h3>🎬 Pesan Spesial Buat Kamu</h3>
+            <video id="bday-video" controls poster="hbd.jpeg">
+                <source src="video.mp4" type="video/mp4" />
+                Browser kamu nggak support video 😢
+            </video>
+        </div>
+
+        <!-- Penyemangat -->
+        <div class="motivation">
+            <p id="motivasi-teks">"Kamu kuat, kamu hebat, kamu berharga." 💖</p>
+            <button id="ganti-motivasi" class="btn small"> fah klik di sini beberapa kali✨</button>
+        </div>
+
+        <button id="love-btn" class="btn heart-btn">Kirim Peluk Virtual 🤗</button>
+        <p id="love-count">Peluk terkirim: 0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
